@@ -1,7 +1,7 @@
 <template>
   <div class="home-content" style="height: 100vh;">
     <div style="display: flex;flex-direction: column;color: white; align-items: center; height: 100%;" >
-      <div style="margin-top: 200px;">
+      <div style="margin-top: 200px;cursor:pointer;" @click="navigateHome">
         <img src="../assets/images/avatar.jpg" style="height: 100px;width: 100px;border-radius: 100%;border: 1px solid white;">
       </div>
       <div style="font-size: 30px;font-weight: 500;margin-top: 10px;">
@@ -19,16 +19,22 @@
         主要记录一些个人在开发中遇到的问题以及对编程技术的学习，欢迎了解更多！
       </div>
       <div style="display: flex;margin-top: 50px;">
-        <div style="width: 60px;height: 30px;border: 1px solid white; border-radius: 15px;line-height: 30px;text-align: center;margin-right: 10px;">
+        <div style="width: 60px;height: 30px;cursor:pointer; border: 1px solid white; border-radius: 15px;line-height: 30px;text-align: center;margin-right: 10px;">
           博客
         </div>
-        <div style="width: 60px;height: 30px;border: 1px solid white; border-radius: 15px;line-height: 30px;text-align: center;">
-          Git
+        <div style="width: 60px;height: 30px;cursor:pointer; border: 1px solid white; border-radius: 15px;line-height: 30px;text-align: center;">
+          <a href="https://github.com/edc-fansion" title="个人代码" target="_blank" style="text-decoration: none;color: white;">
+            Git
+          </a>
         </div>
       </div>
-      <div style="margin-top: 60px;">
-        <span class="icon iconfont icon-githublogo" style="font-size: 30px;margin-right: 30px;"></span>
-        <span class="icon iconfont icon-youxiang01" style="font-size: 30px;"></span>
+      <div style="margin-top: 60px;display: flex;align-items: center;" >
+        <a href="mailto:edc_qingyi@163.com" target="_blank" title="Contact me" style="margin-right: 30px; text-decoration: none;color: white;">
+          <span class="icon iconfont icon-youxiang01" style="cursor:pointer; font-size: 30px;"></span>
+        </a>
+        <a href="https://github.com/edc-fansion" title="青衣茯苓的Github" target="_blank" style="text-decoration: none;color: white;">
+          <span class="icon iconfont icon-githublogo" style="cursor:pointer; font-size: 30px;"></span>
+        </a>
       </div>
     </div>
   </div>
@@ -41,7 +47,12 @@
       return {
         
       }
-    }
+    },
+    methods:{
+      navigateHome(){
+        console.log("查看主页")
+      },
+    },
   }
 </script>
 

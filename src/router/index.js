@@ -4,7 +4,7 @@ import Router from "vue-router"
 Vue.use(Router)
 
 let router = new Router({
-  mode: "history",
+  mode: "hash",
   routes: [{
     path: "/",
     component: require("../pages/home-page.vue").default,
